@@ -41,6 +41,12 @@ jobs:
       - name: Install pnpm
         run: npm install -g pnpm
 
+      - name: pnpm version
+        run: pnpm --version
+      
+      - name: node version
+        run: node --version
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
