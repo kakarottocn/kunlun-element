@@ -52,6 +52,16 @@ jobs:
 
       - name: Build docs
         run: npm run docs:build
+      
+      - name: Check build output
+        run: |
+          echo "Current directory: $(pwd)"
+          echo "--- packages/docs contents ---"
+          ls -la ./packages/docs/
+          echo "--- packages/docs/.vitepress contents ---"
+          ls -la ./packages/docs/.vitepress/ || echo "No .vitepress dir"
+          echo "--- Search for dist folders ---"
+          find ./packages/docs -type d -name "dist" 2>/dev/null || echo "No dist found"
 
       - name: Upload docs
         uses: actions/upload-artifact@v4
