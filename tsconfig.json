@@ -1,47 +1,26 @@
 {
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
-    // 模块输出格式，ESNext 保留原生 import/export，适配Vite、Webpack等打包工具
+    "target": "ES2020",
+    "useDefineForClassFields": true,
     "module": "ESNext",
-    // 是否生成 .d.ts 类型声明文件，业务前端项目关闭，组件库/工具库开启
-    "declaration": false,
-    // 是否禁止隐式 any，false 允许不标注类型自动推断any（宽松模式）
-    "noImplicitAny": false,
-    // 编译输出时移除代码内所有注释
-    "removeComments": true,
-    // 模块解析策略：node 采用node_modules查找规则，符合前端通用规范
-    "moduleResolution": "node",
-    // 开启ES模块与CommonJS模块互操作，兼容require导入、默认导出混用场景
-    "esModuleInterop": true,
-    // JSX语法保留原样输出，交给构建工具（Vite/React/Vue）处理
-    "jsx": "preserve",
-    // 是否禁用内置标准库，false 使用默认DOM、ES内置类型库
-    "noLib": false,
-    // 编译输出JS目标版本ES6(ES2015)，兼容绝大多数现代浏览器
-    "target": "es6",
-    // 生成sourceMap调试文件，浏览器控制台可映射回TS源码
-    "sourceMap": true,
-    // 加载内置类型库：ESNext最新ES语法、DOM浏览器BOM/DOM API类型
-    "lib": [
-      "ESNext",
-      "DOM"
-    ],
-    // 允许导入无默认导出的CommonJS模块时使用import xxx from
-    "allowSyntheticDefaultImports": true,
-    // 启用装饰器语法（适配Vue2、Angular、TS装饰器写法）
-    "experimentalDecorators": true,
-    // 强制导入文件大小写与磁盘文件一致，规避跨平台系统大小写bug
-    "forceConsistentCasingInFileNames": true,
-    // 允许直接import导入.json文件并获得类型提示
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
-    // 开启TS严格类型检查（包含严格空值检查、严格函数参数检查等）
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+
+    /* Linting */
     "strict": true,
-    // 跳过第三方依赖库的类型校验，大幅提升TS编译速度
-    "skipLibCheck": true
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
   },
-  // 编译排除目录，不参与TS类型检查与编译
-  "exclude": [
-    "node_modules",
-    "**/__tests__",
-    "dist/**"
-  ]
+  "include": ["packages/**/*.ts", "packages/**/*.tsx", "packages/**/*.vue"]
 }

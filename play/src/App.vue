@@ -2,5 +2,5 @@
 </script>
 
 <template>
-  <k-icon></k-icon>
+  <kl-icon>123</kl-icon>
 </template>
