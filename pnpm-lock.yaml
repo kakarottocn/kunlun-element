@@ -8,13 +8,13 @@ importers:
 
   .:
     devDependencies:
-      '@zhuxian/components':
+      '@kunlun/components':
         specifier: workspace:*
         version: link:packages/components
-      '@zhuxian/theme-chalk':
+      '@kunlun/theme-chalk':
         specifier: workspace:*
         version: link:packages/theme-chalk
-      '@zhuxian/utils':
+      '@kunlun/utils':
         specifier: workspace:*
         version: link:packages/utils
       typescript:

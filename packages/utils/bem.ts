@@ -14,29 +14,29 @@ export class Bem {
   private states: Set<string> = new Set();
   private prefix: string;
 
-  constructor(block: string = '', element: string = '', prefix: string = 'zx-') {
+  constructor(block: string = '', element: string = '', prefix: string = 'sj-') {
     this.block = block;
     this.element = element;
     this.prefix = prefix;
   }
 
   /** 设置块名（清空元素和修饰符） */
-  b(block: string): this {
-    this.block = block;
+  b(block?: string): this {
+    this.block = block || '';
     this.element = '';
     this.modifiers.clear();
     return this;
   }
 
   /** 设置元素名（清空修饰符） */
-  e(element: string): this {
-    this.element = element;
+  e(element?: string): this {
+    this.element = element || '';
     this.modifiers.clear();
     return this;
   }
 
   /** 添加修饰符 */
-  m(mod: ModifierInput): this {
+  m(mod?: ModifierInput): this {
     if (!mod) return this;
     if (typeof mod === 'string') {
       if (mod.trim()) this.modifiers.add(mod.trim());
