@@ -53,15 +53,14 @@ jobs:
       - name: Build docs
         run: npm run docs:build
       
-      - name: Check build output
+      - name: Check repository structure
         run: |
-          echo "Current directory: $(pwd)"
-          echo "--- packages/docs contents ---"
-          ls -la ./packages/docs/
-          echo "--- packages/docs/.vitepress contents ---"
-          ls -la ./packages/docs/.vitepress/ || echo "No .vitepress dir"
-          echo "--- Search for dist folders ---"
-          find ./packages/docs -type d -name "dist" 2>/dev/null || echo "No dist found"
+          echo "=== Root contents ==="
+          ls -la
+          echo "=== All package.json (max depth 3) ==="
+          find . -maxdepth 3 -name "package.json" -not -path "*/node_modules/*"
+          echo "=== All .vitepress dirs ==="
+          find . -maxdepth 4 -type d -name ".vitepress" -not -path "*/node_modules/*"
 
       - name: Upload docs
         uses: actions/upload-artifact@v4
