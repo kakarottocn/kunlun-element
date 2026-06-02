@@ -1,0 +1,17 @@
+ {
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "pnpm -C play dev",
+    "build": "pnpm --filter @zhuxian/components build",
+    "docs:dev": "pnpm --filter docs dev",
+    "docs:build": "pnpm --filter docs build"
+  },
+  "devDependencies": {
+    "@zhuxian/components": "workspace:*",
+    "@zhuxian/utils": "workspace:*",
+    "@zhuxian/theme-chalk": "workspace:*",
+    "typescript": "^5.4.0",
+    "vue": "^3.4.0"
+  }
+}
