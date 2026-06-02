@@ -4,3 +4,6 @@ packages:
   - 'play'
 
 trustLockfile: true
+
+allowBuilds:
+  esbuild: true
