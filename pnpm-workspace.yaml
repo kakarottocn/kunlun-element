@@ -3,5 +3,4 @@ packages:
   - 'docs'
   - 'play'
 
-minimumReleaseAgeExclude:
-  - 'property-information'
+trustLockfile: true
