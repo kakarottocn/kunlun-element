@@ -32,7 +32,6 @@
     "postcss-each-variables": "^0.3.0",
     "postcss-for": "^2.1.1",
     "postcss-nested": "^6.2.0",
-    "release-it": "^20.2.0",
     "typescript": "^5.2.2",
     "vite": "^5.4.21",
     "vitepress": "^1.6.4",
