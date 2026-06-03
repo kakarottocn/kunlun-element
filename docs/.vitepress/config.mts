@@ -1,9 +1,15 @@
 import { defineConfig } from 'vitepress'
+import {
+  containerPreview,
+  componentPreview,
+} from "@vitepress-demo-preview/plugin";
+
+import { demoMdPlugin } from 'vitepress-plugin-demo'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "KunLun",
-  description: "组件库",
+  description: "组件库，基于ElementPlus二次封装的组件库",
   base: '/kunlun-element/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -12,6 +18,9 @@ export default defineConfig({
       { text: '组件', link: '/components' },
       { text: '工具', link: '/utils' }
     ],
+    search: {
+      provider: "local",
+    },
 
     sidebar: [
       {
@@ -26,5 +35,11 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
-  }
+  },
+  markdown: {
+    config(md) {
+      md.use(containerPreview);
+      md.use(componentPreview);
+    },
+  },
 })
