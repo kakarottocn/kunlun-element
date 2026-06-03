@@ -1,5 +1,5 @@
 {
-  "name": "@kunlun/core",
+  "name": "kunlun",
   "version": "0.0.1",
   "description": "this is a component library that doesn't do much",
   "type": "module",
