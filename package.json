@@ -5,17 +5,17 @@
     "dev": "pnpm -C play dev",
     "doc": "pnpm -C docs dev",
     "test": "pnpm --filter components test",
-    "build": "pnpm --filter kunlun build",
+    "build": "pnpm --filter xirang build",
     "build:docs": "pnpm --filter docs build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
     "@fortawesome/vue-fontawesome": "^3.2.0",
-    "@kunlun/components": "workspace:*",
-    "@kunlun/theme-chalk": "workspace:*",
-    "@kunlun/utils": "workspace:*",
-    "kunlun": "workspace:*",
+    "@xirang/components": "workspace:*",
+    "@xirang/theme-chalk": "workspace:*",
+    "@xirang/utils": "workspace:*",
+    "xirang": "workspace:*",
     "lodash-es": "^4.18.1",
     "vue": "^3.4.0"
   },

@@ -1,5 +1,5 @@
 {
-  "name": "kunlun",
+  "name": "xirang",
   "version": "0.0.1",
   "description": "this is a component library that doesn't do much",
   "type": "module",
@@ -19,17 +19,19 @@
   },
   "sideEffects": ["./dist/index.css"],
   "scripts": {
-    "build": "run-s build:all move-style",
+    "build": "run-s clean build:all move-style",
     "build:all": "run-p build:es build:umd",
     "build:umd": "vite build --config vite.umd.config.ts",
     "build:es": "vite build --config vite.es.config.ts",
-    "move-style":"move-file dist/es/index.css dist/index.css"
+    "move-style":"move-file dist/es/index.css dist/index.css",
+    "clean": "rimraf dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.26.0",
   "devDependencies": {
+    "rimraf": "^6.1.3",
     "move-file-cli": "^3.0.0",
     "vite-plugin-dts": "^3.9.1"
   },

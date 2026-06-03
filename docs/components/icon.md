@@ -56,7 +56,7 @@ icon/slot
 
 ```ts
 import type { IconDefinition } from '@fortawesome/fontawesome-common-types'
-import type { IconProps } from '@kunlun/components'
+import type { IconProps } from '@xirang/components'
 
 interface IconProps {
   name?: string

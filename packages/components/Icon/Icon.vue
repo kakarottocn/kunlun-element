@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { type IconProps } from './Icon'
-import { bem } from '@kunlun/utils/bem'
+import { bem } from '@xirang/utils/bem'
 import { computed } from 'vue'
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
@@ -16,7 +16,7 @@ const namespace = bem('icon')
 
 const style = computed(() => {
   return {
-    fontSize: typeof props.size === 'number' ? `${props.size}px` : props.size,
+    fontSize: Number(props.size) == props.size ? `${props.size}px` : props.size,
     color: props.color,
   }
 })

@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { Icon } from './index'
-import IconComponent from './Icon.vue/index.js'
+import IconComponent from './Icon.vue'
 
 describe('Icon', () => {
   it('renders correctly', () => {

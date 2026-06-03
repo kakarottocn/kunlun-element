@@ -1,6 +1,6 @@
-import { makeInstaller } from '@kunlun/utils/install'
+import { makeInstaller } from '@xirang/utils/install'
 import components from './components'
-import "@kunlun/theme-chalk/index.css"
+import "@xirang/theme-chalk/index.css"
 
 const installer = makeInstaller(components)
 
