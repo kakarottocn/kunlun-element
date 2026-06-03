@@ -6,8 +6,7 @@
     "doc": "pnpm -C docs dev",
     "test": "pnpm --filter components test",
     "build": "pnpm --filter kunlun build",
-    "docs:dev": "pnpm --filter docs dev",
-    "docs:build": "pnpm --filter docs build"
+    "build:docs": "pnpm --filter docs build"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
