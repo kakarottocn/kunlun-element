@@ -1,9 +1,9 @@
-import _Icon from './icon.vue'
+import _Icon from './Icon.vue'
 import { withInstall } from '@kunlun/utils/install'
 
 export const Icon = withInstall(_Icon)
 
-export * from './icon.ts'
+export * from './Icon.ts'
 
 // 支持编译器类型推断
 declare module 'vue' {

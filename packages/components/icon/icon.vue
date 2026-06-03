@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type IconProps } from './icon'
+import { type IconProps } from './Icon'
 import { bem } from '@kunlun/utils/bem'
 import { computed } from 'vue'
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
