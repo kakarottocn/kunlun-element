@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "pnpm -C play dev",
     "doc": "pnpm -C docs dev",
+    "test": "pnpm --filter components test",
     "build": "pnpm -C components build",
     "docs:dev": "pnpm --filter docs dev",
     "docs:build": "pnpm --filter docs build"

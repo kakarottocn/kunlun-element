@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "KunLun",
   description: "组件库",
+  base: '/kunlun-element/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

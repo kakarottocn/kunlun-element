@@ -14,7 +14,7 @@ export class Bem {
   private states: Set<string> = new Set();
   private prefix: string;
 
-  constructor(block: string = '', element: string = '', prefix: string = 'sj-') {
+  constructor(block: string = '', element: string = '', prefix: string = 'kl-') {
     this.block = block;
     this.element = element;
     this.prefix = prefix;
