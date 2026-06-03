@@ -1,6 +1,6 @@
-import { Icon } from '@kunlun/components'
+import * as CMPS from '@kunlun/components'
 import type { Plugin } from 'vue'
 
 export default [
-  Icon
+  CMPS.Icon
 ] as Plugin[]

@@ -4,5 +4,5 @@ import "@kunlun/theme-chalk/index.css"
 
 const installer = makeInstaller(components)
 
-export * from '@kunlun/components'
+export * from '../components'
 export default installer
