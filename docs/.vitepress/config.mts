@@ -4,8 +4,6 @@ import {
   componentPreview,
 } from "@vitepress-demo-preview/plugin";
 
-import { demoMdPlugin } from 'vitepress-plugin-demo'
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "KunLun",
